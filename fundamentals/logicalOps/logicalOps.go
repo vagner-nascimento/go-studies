@@ -6,10 +6,14 @@ func main() {
 	tv50, tv32, iceCream := purchase(true, true)
 
 	fmt.Printf("Tv50: %t, Tv32: %t, IceCream: %t, Healthy: %t",
-		tv50, tv32, iceCream, !iceCream)
+		tv50,
+		tv32,
+		iceCream,
+		!iceCream) // negation (!) is an unary operation
 }
 
 func purchase(work1, work2 bool) (bool, bool, bool) {
+	// binaries operations
 	buyTv50 := work1 && work2
 	buyTv32 := work1 != work2 // exclusive OR
 	buyIceCream := work1 || work2
