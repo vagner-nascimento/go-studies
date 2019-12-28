@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-	IMPORTANT: If the interface had more functions, it MUST be implemented on the struct
+	IMPORTANT: If the interface has more functions, it MUST be implemented on the struct
 	otherwise, it will cause compilation errors
 */
 type printable interface {
