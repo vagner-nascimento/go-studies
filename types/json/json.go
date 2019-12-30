@@ -10,12 +10,12 @@ import (
 // On the product struct, the attributes are setted as public because they will be exported to JSON
 type product struct {
 	ID    int      `json:"id"`
-	Name  string   `json:name`
-	Price float64  `json:"price`
-	Tags  []string `json:"tags`
+	Name  string   `json:"name"`
+	Price float64  `json:"price"`
+	Tags  []string `json:"tags"`
 }
 
-func structToJson(p product) string {
+func structToJSON(p product) string {
 	json, error := json.Marshal(p)
 	if error == nil {
 		return string(json)
@@ -31,11 +31,11 @@ func jsonToStruct(data string) product {
 
 func main() {
 	p1 := product{1, "Notebook", 1899.9, []string{"Promo", "Tech"}}
-	p1Json := structToJson(p1)
-	fmt.Println(p1Json)
+	p1JSON := structToJSON(p1)
+	fmt.Println(p1JSON)
 
-	pJson := `{"id":2,"name":"Pen","price":8.90,"tags":["School","Office"]}`
-	p2 := jsonToStruct(pJson)
+	pJSON := `{"id":2,"name":"Pen","price":8.90,"tags":["School","Office"]}`
+	p2 := jsonToStruct(pJSON)
 	fmt.Println(p2)
 	fmt.Println(p2.Name)
 	fmt.Println(p2.Tags)
