@@ -1,4 +1,4 @@
-package main
+package go_studies_area
 
 import (
 	"fmt"
