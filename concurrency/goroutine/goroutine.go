@@ -25,4 +25,5 @@ func main() {
 	// It prints the go routine proccessment while John keep talking, so, after 5 times the main finishes and Mary don't completes all your speaks
 	go speak("Mary", "Got it!!!", 10)
 	speak("John", "Congratulation!", 5)
+	// OBS.: go routines is not a thread. One thread can manager more than one go routines(it will be explained better on the next lessons)
 }
