@@ -8,9 +8,9 @@ import (
 )
 
 // Search at Youtube: Google I/O 2012 - Go Concurrency Patterns
+// Genetor Pattern encapsules the use of go routines, returning a read only channel where the result will be sended while they are ready
 
 // <-chan = A read only channel
-
 func getTitles(urls ...string) <-chan string {
 	ch := make(chan string)
 
