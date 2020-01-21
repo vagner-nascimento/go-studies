@@ -31,7 +31,7 @@ func getTitles(urls ...string) <-chan string {
 
 func main() {
 	t1 := getTitles("https://www.cod3r.com.br", "https://www.google.com")
-	t2 := getTitles("https://www.amazon.com", "https://www.youtube.com")
+	t2 := getTitles("https://stackoverflow.com/", "https://www.youtube.com")
 
 	fmt.Println("Firsts:", <-t1, "|", <-t2)
 	fmt.Println("Seconds:", <-t1, "|", <-t2)
