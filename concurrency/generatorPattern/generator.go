@@ -19,9 +19,10 @@ func getTitles(urls ...string) <-chan string {
 		go func(urlParam string) { // Calling an anonymous function in a go routine
 			resp, _ := http.Get(urlParam)
 			html, _ := ioutil.ReadAll(resp.Body)
+			regX, _ := regexp.Compile("<title.*?>(.*?)<\\/title>")
+			matches := regX.FindStringSubmatch(string(html))
 
-			r, _ := regexp.Compile("<title>(.*?)<\\/title>")
-			ch <- r.FindStringSubmatch(string(html))[1] //WILL BREAK HERE
+			ch <- matches[1]
 		}(url) // Passing each URL in URLs array
 	}
 
