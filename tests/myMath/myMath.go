@@ -18,3 +18,14 @@ func Avarage(numbers ...float64) float64 {
 
 	return roundAvarage
 }
+
+// Sum sum the values
+func Sum(vallues ...int) int {
+	total := 0
+
+	for _, val := range vallues {
+		total += val
+	}
+
+	return total
+}

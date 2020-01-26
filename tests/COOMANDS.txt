@@ -1,0 +1,6 @@
+Tests commands
+
+- go test -cover ./tests/...  // -cover will show the percent code covered
+- go test -coverprofile=testResult.out ./tests/... // Creates the file with tests results on the current folder
+- go tool cover -func=testResult.out // Reads the file and display on console the results by functions
+- go tool cover -html=testResult.out // Reads the file and display on browser(html) the detailed results
