@@ -1,7 +1,6 @@
 package math
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -11,11 +10,11 @@ import (
 const errorMessage = "Expected value %v is different to the calculated value %v"
 
 func TestAvarage(t *testing.T) {
-	t.Parallel() // It means that this test will run parallel with others tests (ALWAYS USE IT TO RUN FASTER)
+	t.Parallel() // It means that this test will run parallel with other tests which use t.Parallel too
 	expectedVal := 7.28
-	val := Avarage(7.2, 9.9, 6.1, 5.9)
+	val := Avarage(7.2, 9.9, 6.1, 5.8)
 
 	if expectedVal != val {
-		t.Error(fmt.Sprintf(errorMessage, expectedVal, val))
+		t.Errorf(errorMessage, expectedVal, val)
 	}
 }
