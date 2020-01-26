@@ -1,4 +1,4 @@
-package math
+package mymath
 
 import (
 	"fmt"
@@ -15,5 +15,6 @@ func Avarage(numbers ...float64) float64 {
 
 	avarage := total / float64(len(numbers))
 	roundAvarage, _ := strconv.ParseFloat(fmt.Sprintf("%.2f", avarage), 64) //64 is the size of desired float
+
 	return roundAvarage
 }
