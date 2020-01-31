@@ -8,11 +8,11 @@ import (
 
 func main() {
 	db, error := sql.Open("mysql", "root:admin@/gocourse")
-	defer db.Close()
-
 	if error != nil {
 		panic(error)
 	}
+
+	defer db.Close()
 
 	statement, _ := db.Prepare("insert into users(name) values (?)") // Preparing an statement with a insert command, you can pass as much values as you want
 	statement.Exec("Mary")                                           // Executing the insert though the created statement

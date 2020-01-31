@@ -16,12 +16,12 @@ func exec(db *sql.DB, sql string) sql.Result {
 }
 
 func main() {
-	db, error := sql.Open("mysql", "root:admin@/") // It will use the mysql lib implicitly. If you remove the undercore, no errors will happen, but WILL NOT WORK
-	defer db.Close()
-
+	db, error := sql.Open("nd", "root:admin@/") // It will use the mysql lib implicitly. If you remove the undercore, no errors will happen, but WILL NOT WORK
 	if error != nil {
 		panic(error)
 	}
+
+	defer db.Close()
 
 	exec(db, "create database if not exists gocourse")
 
