@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql" // The underscore before this import means that it will be implicitly used, but never explicit
 )
 
@@ -23,11 +24,16 @@ func main() {
 	}
 
 	exec(db, "create database if not exists gocourse")
+
+	fmt.Println("Database godourse created")
+
 	exec(db, "use gocourse")
 	exec(db, "drop table if exists users")
 	exec(db, `create table users (
 		id integer auto_increment,
-		nome varchar(80),
+		name varchar(80),
 		PRIMARY KEY (id)
 	)`)
+
+	fmt.Println("Table users created into gocourse database")
 }
