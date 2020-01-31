@@ -1,1 +1,5 @@
 - Is possible to configure Go to run the code in only one architecture, like linux, windows, mac
+- Date time format templates: Ex.: nowStr := time.Now().Format("02/01/2006 03:04:05")
+    This is the way that Go formats the date, using number(in other languages are used specif format strings like "dd/mm/yyyy hh:mm:ss"
+	IMPORTANT: There pre defined values to do it, can't be any data.
+	To get more information an valid values visit: https://programming.guide/go/format-parse-string-time-date-example.html
