@@ -11,7 +11,7 @@ func main() {
 
 	x := 3.141516
 	//fmt.Println("The value of x is " + x) //Gives error on compile
-	sx := fmt.Sprint(x) //Returns a formatted string	
+	sx := fmt.Sprint(x) //Returns a formatted string
 	fmt.Println("The value of x is " + sx)
 	fmt.Println("The value of x is", x)       //This already convert and format the desired value into a string
 	fmt.Printf("The value of x is %f", x)     //The whole float

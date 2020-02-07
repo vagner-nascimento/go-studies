@@ -7,19 +7,19 @@ import (
 	"github.com/vagner-nascimento/go-studies/goodPractices/newFunctions/onetype"
 )
 
-func main()  {
+func main() {
 	oneTypeExample()
 	multipleTypesExample()
 }
 
-func oneTypeExample()  {
+func oneTypeExample() {
 	v := onetype.New()
 	vBytes, _ := json.Marshal(v)
 
 	fmt.Printf("One Type New function %s\n", string(vBytes))
 }
 
-func multipleTypesExample()  {
+func multipleTypesExample() {
 	one := multitypes.NewOne()
 	two := multitypes.NewTwo()
 
