@@ -14,8 +14,13 @@ func main() {
 		fmt.Printf("index %d, value %d\n", index, value)
 	}
 
-	// ignoring index, looks like .forEach()
+	// ignoring index, looks like forEach
 	for _, value := range numbers {
-		fmt.Println(value)
+		fmt.Printf("Getting only value %d\n", value)
+	}
+
+	// if you need only the first value (key), you can omit the second one
+	for key := range numbers {
+		fmt.Printf("Getting only key %d\n", key)
 	}
 }
