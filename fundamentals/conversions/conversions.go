@@ -32,31 +32,31 @@ func main() {
 	//Converting string to boolean (only "true" and "1" gives true, all other string returns false)
 	bol, _ := strconv.ParseBool("true")
 	if bol {
-		fmt.Println("Converted \"true\" to true")
+		fmt.Println("Converted \"true\" to", bol)
 	}
 
 	bol, _ = strconv.ParseBool("1")
 	if bol {
-		fmt.Println("Converted \"1\" to true")
+		fmt.Println("Converted \"1\" to", bol)
 	}
 
 	bol, _ = strconv.ParseBool("9999")
 	if !bol {
-		fmt.Println("Converted \"9999\" to false")
+		fmt.Println("Converted \"9999\" to", bol)
 	}
 
 	bol, _ = strconv.ParseBool("-44")
 	if !bol {
-		fmt.Println("Converted \"-44\" to false")
+		fmt.Println("Converted \"-44\" to", bol)
 	}
 
 	bol, _ = strconv.ParseBool("tony")
 	if !bol {
-		fmt.Println("Converted \"tony\" to false")
+		fmt.Println("Converted \"tony\" to", bol)
 	}
 
 	bol, _ = strconv.ParseBool("@")
 	if !bol {
-		fmt.Println("Converted \"@\" to false")
+		fmt.Println("Converted \"@\" to", bol)
 	}
 }

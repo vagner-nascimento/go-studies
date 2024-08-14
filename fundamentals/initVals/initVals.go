@@ -11,11 +11,13 @@ func main() {
 	var c bool
 	var d string
 	var e *int
+	var i interface{}
 
-	fmt.Printf("Initital values\n%v: %v\n%v: %v\n%v: %v\n%v: %q\n%v: %v\n",
+	fmt.Printf("Initital values\n%v: %v\n%v: %v\n%v: %v\n%v: %q\n%v: %v\n %v:%v\n",
 		reflect.TypeOf(a), a,
 		reflect.TypeOf(b), b,
 		reflect.TypeOf(c), c,
 		reflect.TypeOf(d), d,
-		reflect.TypeOf(e), e)
+		reflect.TypeOf(e), e,
+		reflect.TypeOf(i), i)
 }
