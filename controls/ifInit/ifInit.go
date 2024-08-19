@@ -13,6 +13,8 @@ func main() {
 	*/
 	if i := aletoryNumber(); i > 5 { // it works also to switch
 		fmt.Println("Win, i:", i)
+	} else if i > 3 {
+		fmt.Println("Almost, i:", i)
 	} else {
 		fmt.Println("Lose, i:", i)
 	}

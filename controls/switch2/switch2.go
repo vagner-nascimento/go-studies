@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	// printHello()
+	printHello()
 
 	fmt.Println(scoreToConcept(9.8))
 	fmt.Println(scoreToConcept(6.9))
@@ -28,7 +28,8 @@ func printHello() {
 }
 
 /*
-	Challenge: Refactor the code bellow using switch expression:
+Challenge: Refactor the code bellow using switch expression:
+
 	func scoreToConcept(n float64) string {
 		if n >= 9 && n <= 10 {
 		return "A"
@@ -46,7 +47,7 @@ func printHello() {
 func scoreToConcept(s float64) string {
 	sInt := int(s)
 
-	switch {
+	switch { // same than switch true {}
 	case sInt >= 9 && sInt <= 10:
 		return "A"
 	case sInt >= 8 && sInt < 9:

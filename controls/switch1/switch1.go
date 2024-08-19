@@ -7,6 +7,7 @@ func main() {
 	fmt.Println(scoreToConcept(6.9))
 	fmt.Println(scoreToConcept(2.1))
 	fmt.Println(scoreToConcept(-1))
+	fmt.Println(scoreToConcept(10))
 }
 
 func scoreToConcept(score float64) string {
@@ -16,6 +17,7 @@ func scoreToConcept(score float64) string {
 		Go's switch don't execute one case after other by default, like Java and other languages do (which dumb)
 		This is GREAT, once it rarely is used.
 		If you want to do that, you should to use "fallthrough" key word
+		Don't need break, it just leave out when a case is satisfied
 	*/
 	switch nota {
 	case 10:
