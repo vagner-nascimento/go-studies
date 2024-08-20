@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 	s1 := make([]int, 10, 20)
 	s2 := append(s1, 1, 2, 3)
-	fmt.Println(s1, s2) //both chare the same internal array from pos 1 until 9
+	fmt.Println(s1, s2) //both share the same internal array from pos 1 until 9
 
 	s1[0] = 7
 	fmt.Println(s1, s2) // both have now 7 at firs pos of array

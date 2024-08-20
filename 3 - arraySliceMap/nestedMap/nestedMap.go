@@ -20,7 +20,7 @@ func main() {
 
 	fmt.Println(empByLetter)
 
-	// delete(empByLetter, "A")
+	//delete(empByLetter, "A")
 
 	for letter, employees := range empByLetter {
 		fmt.Println("Employees with letter", letter)

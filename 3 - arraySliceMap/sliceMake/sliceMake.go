@@ -13,5 +13,9 @@ func main() {
 	fmt.Println(s, len(s), cap(s))
 
 	s = append(s, 666)
-	fmt.Println(s, len(s), cap(s)) // if you pass internal array's size, it creates an other array with 40 positions
+	/*
+		if you pass the internal array's size, it creates another array with the same capacity of the first one (wiche doubles the size of the slice)
+		and starts to fill it with the new items added
+	*/
+	fmt.Println(s, len(s), cap(s))
 }

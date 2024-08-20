@@ -12,10 +12,10 @@ func main() {
 
 	// slice1 = append(slice1, array1) //it doesn't works too
 	slice2 := make([]int, 2)
-	copy(slice2, slice1) //the slice2 has only 2 positions, so it copy only the first 2 elements of the slice2, which has len 3
+	copy(slice2, slice1) //the slice2 has only 2 positions, so it copy only 2 first elements of the slice1, which has len 3
 	fmt.Println(slice1, slice2)
 
 	slice3 := make([]int, 3)
-	copy(slice3, slice2) //it copy only the 2 first elements into the slice3
+	copy(slice3, slice2) //it copy only 2 first elements into the slice3 and fills the remaining spaces with 0
 	fmt.Println(slice2, slice3)
 }
