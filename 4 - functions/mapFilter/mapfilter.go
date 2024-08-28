@@ -25,6 +25,7 @@ func main() {
 		{Name: "Adri", Age: 26, Id: "229.835.460-04"},
 		{Name: "Bern", Age: 28, Id: "974.803.110-10"},
 	}
+
 	cleanCpf := func(p person) person {
 		p.Id = strings.ReplaceAll(p.Id, ".", "")
 		p.Id = strings.ReplaceAll(p.Id, "-", "")

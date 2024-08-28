@@ -40,4 +40,26 @@ func main() {
 	fmt.Println("a2", a2, "s2", s2, "s4", s4)
 	a2[1] = 2
 	fmt.Println("a2", a2, "s2", s2, "s4", s4)
+
+	// slice passed by param
+	fmt.Println("by param a2", a2, "s2", s2)
+	fn(s2)
+	fmt.Println("side effect a2", a2, "s2", s2)
+	s2[0] = 2
+
+	// array passed by param NO SIDE EFFECTS
+	fmt.Println("by param s2", s2, "a2", a2)
+	fnArr(a2)
+	fmt.Println("NO side effect s2", s2, "a2", a2)
+}
+
+// with side effect
+func fn(vals []int) {
+	vals[0] = 9
+}
+
+// without side effects
+func fnArr(vals [5]int) {
+	vals[1] = 9
+	fmt.Println("array chnaged into func", vals)
 }
